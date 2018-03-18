@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.smriti.phoneguider">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <application
+        android:name=".data.AppData"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+    <activity
+        android:name=".activity.CarouselActivity"
+        android:label="@string/app_name" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER"/>
+            <action android:name="com.smriti.phoneguider" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+        </intent-filter>
+        <intent-filter>
+            <action android:name="com.smriti.phoneguider.NK_CUSTOM_ACTION" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+        </intent-filter>
+    </activity>
+        <activity
+            android:name=".activity.HomeScreenActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="@string/settings"></activity>
+    <activity
+        android:name=".activity.InstalledAppListActivity"
+        android:label="@string/user_app"
+        android:theme="@style/AlertDialogCustom" >
+    </activity>
+    <activity
+        android:name=".activity.ApplicationInformationActivity"
+        android:label="@string/detail_app"
+        android:theme="@style/AlertDialogCustom" >
+    </activity>
+    </application>
+</manifest>

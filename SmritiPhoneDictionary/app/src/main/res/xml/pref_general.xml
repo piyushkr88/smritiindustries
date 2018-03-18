@@ -1,0 +1,15 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="app_name"
+        android:title="About Us"
+        android:summary="Who are we"
+        />
+
+    <Preference
+        android:key="app_version"
+        android:title="Application Version 1.0"
+        android:summary="Released on 17th Sep,2017"
+        />
+
+</PreferenceScreen>
